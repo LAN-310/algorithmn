@@ -43,3 +43,10 @@ Python中的花括号{}：
 2 >>> dic
 
 3 {'jon': 'boy', 'lili"': 'girl'}
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+ 
+dict['Age'] = 8 # 更新
+
+dict['School'] = "RUNOOB" # 添加
+

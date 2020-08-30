@@ -50,3 +50,72 @@ dict['Age'] = 8 # 更新
 
 dict['School'] = "RUNOOB" # 添加
 
+python 类的定义与使用
+---
+
+为了代码的编写方便简洁，引入了类的定义；
+
+一般，使用 class 语句来创建一个新类，class之后为类的名称(通常首字母大写)并以冒号结尾，例如:
+
+class Ticket():
+    def __init__(self,checi,fstation,tstation,fdate,ftime,ttime):
+        self.checi=checi
+        self.fstation=fstation
+        self.tstation=tstation
+        self.fdate=fdate
+        self.ftime=ftime
+        self.ttime=ttime
+    def printinfo(self):
+        print("车次：",self.checi)
+        print("出发站：", self.fstation)
+        print("到达站：", self.tstation)
+        print("出发时间：", self.fdate)
+
+#类中可以定义所使用的方法，类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称, 按照惯例它的名称是 self；
+
+#init()方法是一种特殊的方法，被称为类的初始化方法，当创建这个类的实例时就会调用该方法；
+
+#self 代表类的实例，self 在定义类的方法时是必须有的，虽然在调用时不必传入相应的参数；
+
+接下来是类的对象的创建：
+
+#创建a1对象
+a1=Ticket("G11","xian","beijing",'2019-01-20','13:00','18:00')
+#创建a2对象
+a2=Ticket("T11","xian","beijing",'2019-01-21','13:00','19:00')
+``
+
+对象属性的访问：
+
+a1.printinfo()
+a2.printinfo()
+
+再举个例子：
+
+
+class Calculator:
+    name="jisuanqi" #这是固有属性
+    price=28
+    #初始化，里面的参数可以自己定义
+    def __init__(self,name,price,hight,width,weight):
+        self.name=name
+        self.price=price
+        self.h=hight
+        self.w=width
+        self.weight=weight
+
+    def add(self,x,y):
+        print(self.name)
+        result=x+y
+        print(result)
+    def subtract(self,x,y):
+        print(x-y)
+    def multiply(self,x,y):
+        print(x*y)
+    def divide(self,x,y):
+        print(x/y)
+#这里必须传入参数才可以
+calc=Calculator('good calc',280,30,30,100)
+print(calc.name)#jisuanqi
+print(calc.weight)#100
+print(calc.price)#280

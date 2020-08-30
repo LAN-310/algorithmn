@@ -56,7 +56,7 @@ python 类的定义与使用
 为了代码的编写方便简洁，引入了类的定义；
 
 一般，使用 class 语句来创建一个新类，class之后为类的名称(通常首字母大写)并以冒号结尾，例如:
-
+```python
 class Ticket():
     def __init__(self,checi,fstation,tstation,fdate,ftime,ttime):
         self.checi=checi
@@ -70,6 +70,7 @@ class Ticket():
         print("出发站：", self.fstation)
         print("到达站：", self.tstation)
         print("出发时间：", self.fdate)
+```
 
 #类中可以定义所使用的方法，类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称, 按照惯例它的名称是 self；
 
@@ -79,20 +80,21 @@ class Ticket():
 
 接下来是类的对象的创建：
 
+```python
 #创建a1对象
 a1=Ticket("G11","xian","beijing",'2019-01-20','13:00','18:00')
 #创建a2对象
 a2=Ticket("T11","xian","beijing",'2019-01-21','13:00','19:00')
-``
+```
 
 对象属性的访问：
-
+```python
 a1.printinfo()
 a2.printinfo()
-
+```
 再举个例子：
 
-
+```python
 class Calculator:
     name="jisuanqi" #这是固有属性
     price=28
@@ -119,3 +121,4 @@ calc=Calculator('good calc',280,30,30,100)
 print(calc.name)#jisuanqi
 print(calc.weight)#100
 print(calc.price)#280
+```

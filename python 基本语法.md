@@ -122,3 +122,5 @@ print(calc.name)#jisuanqi
 print(calc.weight)#100
 print(calc.price)#280
 ```
+
+" / "就表示 浮点数除法，返回浮点结果;" // "表示整数除法。
